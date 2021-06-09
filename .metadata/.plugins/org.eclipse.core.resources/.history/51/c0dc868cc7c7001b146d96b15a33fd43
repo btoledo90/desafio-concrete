@@ -1,0 +1,5 @@
+package com.concrete.desafio.resources;
+
+public class CategoryResource {
+
+}

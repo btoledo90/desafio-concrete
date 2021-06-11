@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="com.concrete.desafio.resources" project="backend" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.concrete.desafio.resources.UsuarioResourceTest" time="0.942" displayname="UsuarioResourceTest" uniqueid="[engine:junit-jupiter]/[class:com.concrete.desafio.resources.UsuarioResourceTest]">
-    <testcase name="deveValidarStatusCode201" classname="com.concrete.desafio.resources.UsuarioResourceTest" time="0.942" displayname="deveValidarStatusCode201()" uniqueid="[engine:junit-jupiter]/[class:com.concrete.desafio.resources.UsuarioResourceTest]/[method:deveValidarStatusCode201()]"/>
-  </testsuite>
-</testrun>

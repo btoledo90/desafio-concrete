@@ -1,0 +1,5 @@
+package com.concrete.desafio.business;
+
+public class UserBusiness {
+
+}

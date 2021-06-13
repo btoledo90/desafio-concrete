@@ -1,24 +1,20 @@
 package com.concrete.desafio.entities;
 
 import java.io.Serializable;
+<<<<<<< HEAD
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
+=======
+>>>>>>> parent of 4c7d6dc (Finish register)
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -35,15 +31,7 @@ public class User implements UserDetails, Serializable{
 	
 	@Column(unique = true)
 	private String email;
-	private String password;		
-	private LocalDate created;		
-	@OneToMany(fetch = FetchType.EAGER,	mappedBy = "user", cascade = CascadeType.ALL)			
-	private List<Phone> phones;	
-	private LocalDate modified;	
-	private LocalDate lastLogin;	
-	private UUID token;
-	
-	
+	private String password;	
 	
 	
 	public User() {
@@ -87,47 +75,6 @@ public class User implements UserDetails, Serializable{
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	
-	public LocalDate getCreated() {
-		return created;
-	}
-
-	public void setCreated(LocalDate created) {
-		this.created = created;
-	}
-
-	public List<Phone> getPhones() {
-		return phones;
-	}
-
-	public void setPhones(List<Phone> phones) {
-		this.phones = phones;
-	}
-	
-
-	public LocalDate getModified() {
-		return modified;
-	}
-
-	public void setModified(LocalDate modified) {
-		this.modified = modified;
-	}
-
-	public LocalDate getLastLogin() {
-		return lastLogin;
-	}
-
-	public void setLastLogin(LocalDate lastLogin) {
-		this.lastLogin = lastLogin;
-	}
-
-	public UUID getToken() {
-		return token;
-	}
-
-	public void setToken(UUID token) {
-		this.token = token;
 	}
 
 	@Override

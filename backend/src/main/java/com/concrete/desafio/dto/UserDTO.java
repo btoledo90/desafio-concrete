@@ -1,17 +1,18 @@
 package com.concrete.desafio.dto;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.stream.Collectors;
 
-import com.concrete.desafio.entities.Phone;
-import com.concrete.desafio.entities.User;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	 
 	private Long id;
+	
+	@NotBlank(message = "Campo obrigatório")
 	private String name;
+<<<<<<< HEAD
 	private String email;
 	private String password;
 	private List<PhoneDTO> phones;
@@ -59,21 +60,12 @@ public class UserDTO implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+=======
+>>>>>>> parent of 4c7d6dc (Finish register)
 	
-	public User toUserEntity() {
-		User user = new User();
-		user.setName(this.getName());
-		user.setEmail(this.getEmail());
-		user.setPassword(this.getPassword());
-		List<Phone> phones = this.getPhones()
-		.stream()
-		.map(phoneDTO -> new Phone(phoneDTO.getId(), phoneDTO.getNumber(), phoneDTO.getDdd()))
-		.collect(Collectors.toList()); 
-		user.setPhones(phones);
-		
-		return user;
+	@Email(message = "E-mail já existe")
+	private String email;
 	
-		
-	}
+	private String password;	
 
 }

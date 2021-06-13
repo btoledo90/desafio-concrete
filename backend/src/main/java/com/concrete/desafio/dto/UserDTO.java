@@ -12,11 +12,8 @@ public class UserDTO implements Serializable {
 
 	private Long id;
 	private String name;
-
 	private String email;
-
 	private String password;
-
 	private List<PhoneDTO> phones;
 
 	public Long getId() {

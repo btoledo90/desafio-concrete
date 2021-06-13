@@ -1,7 +1,10 @@
 package com.concrete.desafio.dto;
 
-public class PhoneDTO {
+import java.io.Serializable;
 
+public class PhoneDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	private Long id;
 	private String number;
 	private String ddd;

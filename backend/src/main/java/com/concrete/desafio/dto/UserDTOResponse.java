@@ -3,30 +3,17 @@ package com.concrete.desafio.dto;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
-
-import javax.persistence.Transient;
-
-import com.concrete.desafio.entities.Phone;
-import com.concrete.desafio.entities.User;
 
 public class UserDTOResponse {
 
 	private Long id;
 	private String name;
-
 	private String email;
-
 	private String password;
-
 	private List<PhoneDTO> phones;
-
 	private LocalDate created;
-
 	private LocalDate modified;
-
 	private LocalDate lastLogin;
-
 	private UUID token;
 
 	public LocalDate getCreated() {
